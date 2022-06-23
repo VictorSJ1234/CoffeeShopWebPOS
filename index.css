@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Comfortaa:wght@300;400&family=Montserrat:wght@300&display=swap');
+html, body{
+    width: 100%;
+    margin: 0px;
+    background-color: #6f4e37;
+}
+header{
+    display: sticky;
+    top: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #6f4e37;
+}
+#headerText{
+    display: block;
+    margin: 0px;
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+    padding: 10px;
+}
+
+/*mainFrame*/
+.mainFrame{
+    position: relative;
+    margin-top: 50px;
+    padding-top: 10px;
+    background-color: #6f4e37;
+}
+
+/*items*/
+.itemsContainer{
+    background-color: burlywood;
+    width: 65%;
+    text-align: center;
+}
+#coffeeLabel{
+    margin: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+#p1{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.buttons{
+    width: 170px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: solid 2px gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons:hover{
+    background-color: #557846;
+    color: black;
+}
+#coffee1:hover ~ #coffee1Button, #coffee2:hover ~ #coffee2Button, #coffee3:hover ~ #coffee3Button ,
+#coffee4:hover ~ #coffee4Button ,#coffee5:hover ~ #coffee5Button, #coffee6:hover ~ #coffee6Button{
+    background-color: #557846;
+    color: black;
+}
+#coffee1, #coffee2, #coffee3, #coffee4, #coffee5, #coffee6{
+    cursor: pointer;
+}
+.coffees{
+    height: 170px;
+    padding: 0px 20px;
+    margin-top: 0px;
+}
+.coffeesContainer {  
+    text-align: center ;
+    width: 90%;
+    margin: 0 auto;
+}
+.coffeesContainer ul li{
+    display: inline-block;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+/* for modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+    margin: 0;
+    padding: 5px;
+}
+
+.modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    background-color: crimson;
+    color: white;
+    font-size: large;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    background-color: #F2AA4CFF;
+    text-align: center;
+
+}
+
+.modal-footer {
+    background: var(--modal-color);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: gold;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+P{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+/*for tables*/
+.pos{
+    display: block;
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    width: 35%;    
+    background-color: #6f4e37;
+}
+.table1{
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    border: solid white;
+}
+.table1 tr th{
+    font-size: 10px;
+    font-weight: bolder;
+    height: 39px;
+}
+.table1 tr td{
+    min-width: 70px;
+    text-align: center;
+    background-color: #6f4e37;
+    color: white;
+    padding: 3px;
+}
+
+/*for pos*/
+.computations{
+    text-align: end;
+    background-color: black;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+input{
+    position: relative;
+    margin-bottom: 10px;
+}
+#subtotal{
+    margin-top: 20px;
+}
+label{
+    color: white;
+}
+.amountPaidContainer{
+    border-radius: 20px;
+    background-color: #557846;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#computeButton{
+    background-color: gold;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+#computeButton:hover{
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+.changeContainer{
+    border-radius: 20px;
+    text-align: center;
+    background-color: #557846;
+    padding-top: 5px;
+    margin-top: 15px;
+}
+#change{
+    text-align: center;
+}
+#cash{
+    text-align: center;
+}
+.cancelButtonContainer{
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+#cancelButton{
+    border-radius: 20px;
+    width: 100%;
+    background-color: crimson;
+    color: white;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#cancelButton:hover{
+    background-color: red;
+    color: black;
+}
+#totalAmount{
+    background-color: orange;
+    color: black;
+}
+
+/*for pay button*/
+.payContainer{
+    text-align: center;
+    margin-top: 40px;
+}
+#payButton{
+    border-radius: 20px;
+    width: 100%;
+    background-color: cyan;
+    color: black;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+.icons{
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    padding: 5px 15px;
+    color: black;
+    padding-bottom: 0;
+}
+.icons #facebook{
+    border: solid 2px black;
+    padding: 5px;
+    width: 50px;
+    background-color: gold;
+
+}
+.icons #instagram{
+    border: solid 2px black;
+    padding: 5px;
+    width: 50px;
+    background-color: gold;
+}
+.icons #twitter{
+    border: solid 2px black;
+    padding: 5px;
+    width: 50px;
+    background-color: gold;
+}
+.footerText{
+    text-align: center;
+    margin: 0px;
+}
+#email{
+    text-align: center;
+    margin: 0px;
+}
+footer{
+    background-color: gold;
+    padding: 20px;
+    margin-top: 100px;
+}

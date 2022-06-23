@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h2 id="headerText">COFFEE SHOP</h2>
+    </header>
+    
+    <main>
+        <div class="mainFrame">
+            <!--computations and selected products-->
+            <div class="pos">
+                <table class="table1">
+                    <tr>
+                    <th>Code:</th>
+                    <th>Product Name:</th>
+                    <th>Price:</th>
+                    <th>Quantity:</th>
+                    <th>Total Amount:</th> 
+                    </tr>
+            </table>
+            <div class="computations">
+                    <label for="subtotal" id="subtotalLabel">SUBTOTAL:</label>
+                    <input type="text" id="subtotal" placeholder="0" readonly>
+                    <br>
+                    <label for="tax" id="taxLabel">TAX:</label>
+                    <input type="text" id="tax" placeholder="12%" readonly>
+                    <br>
+                    <label for="totalAmount" id="totalLabel">TOTAL AMOUNT:</label>
+                    <input type="text" id="totalAmount" value="0" readonly>
+                    <br><br>
+                        <div class="amountPaidContainer">
+                            <label for="cash" id="cashLabel">ENTER AMOUNT:</label><br>
+                            <input type="text" id="cash">
+                            <br>
+                            <button type="button" id="computeButton">COMPUTE CHANGE</button>
+                            <br>
+                        </div>
+                        <div class="changeContainer">
+                            <label for="change" id="changeLabel">CHANGE:</label><br>
+                            <input type="text" id="change" placeholder="0" readonly>
+                        </div>
+                        <div class="payContainer">
+                            <button type="button" id="payButton">PAY</button>
+                        </div>
+                        <div class="cancelButtonContainer">
+                            <button type="button" id="cancelButton">CANCEL TRANSACTION</button>
+                    </div>
+                    </div>
+            </div>
+            <!--items container-->
+            <div class="itemsContainer">
+                <h2 id="coffeeLabel">MENU</h2>
+                <br>
+                <div class="coffeesContainer">
+                    <ul>
+                        <li>
+                            <img src="images/americano.jpg" class="coffees" id="coffee1"><br>
+                            <button type="button" class="buttons" id="coffee1Button">AMERICANO</button><br>
+                        </li>
+                        <li>
+                            <img src="images/blackEye.jpg" class="coffees" id="coffee2"><br>
+                            <button type="button" class="buttons" id="coffee2Button">BLACK EYE</button><br>
+                        </li>
+                        <li>
+                        <img src="images/doubleEspresso.jpg" class="coffees" id="coffee3"><br>
+                            <button type="button" class="buttons" id="coffee3Button">2X ESPRESSO</button><br>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <img src="images/redEye.jpg" class="coffees" id="coffee4"><br>
+                            <button type="button" class="buttons" id="coffee4Button">RED EYE</button><br>
+                        </li>
+                        <li>
+                            <img src="images/espresso.jpg" class="coffees" id="coffee5"><br>
+                            <button type="button" class="buttons" id="coffee5Button">ESPRESSO</button><br>
+                        </li>
+                        <li>
+                        <img src="images/macchiato.jpg" class="coffees" id="coffee6"><br>
+                            <button type="button" class="buttons" id="coffee6Button">MACCHIATO</button><br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--MODALS-->
+        <!--coffee1-->
+        <div id="coffee1Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee1">&times;</span>
+                <h2>200 PESOS</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee1Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton1">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>AMERICANO</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--coffee2-->
+        <div id="coffee2Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee2">&times;</span>
+                <h2>250 PESOS</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee2Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton2">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>BLACK EYE</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--coffee3-->
+        <div id="coffee3Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee3">&times;</span>
+                <h2>300 PESOS</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee3Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton3">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>2X ESPRESSO</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--coffee4-->
+        <div id="coffee4Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee4">&times;</span>
+                <h2>RED EYE</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee4Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton4">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>RED EYE</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--coffee5-->
+        <div id="coffee5Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee5">&times;</span>
+                <h2>300 PESOS</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee5Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton5">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>ESPRESSO</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--coffee6-->
+        <div id="coffee6Modal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeCoffee6">&times;</span>
+                <h2>300 PESOS</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER QUANTITY:</p>
+                <input type="text" id="coffee6Quantity"><br><br>
+                <button type="button" class="buttons" id="confirmButton6">CONFIRM</button>
+            </div>
+            <div class="modal-footer">
+                <h3>MACCHIATO</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--not input error-->
+        <div id="noInputModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeNoInputModal">&times;</span>
+                <h2>ERROR!</h2>
+            </div>
+            <div class="modal-body">
+                <p>THERE IS NO INPUT!</p>
+                <button type="button" class="buttons" id="backButton">BACK</button>
+            </div>
+            <div class="modal-footer">
+                <h3>ERROR!</h3>
+            </div>
+            </div>
+        </div>
+        <!--if amount paid is less than the total amount-->
+        <div id="insufficientAmountModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeInsufficientError">&times;</span>
+                <h2>ERROR!</h2>
+            </div>
+            <div class="modal-body">
+                <p>ENTER THE RIGHT AMOUNT OF MONEY!</p>
+                <button type="button" class="buttons" id="backButton2">BACK</button>
+            </div>
+            <div class="modal-footer">
+                <h3>ERROR!</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--pay modal-->
+        <div id="payModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closePayModal">&times;</span>
+                <h2>CONFIRM PAYMENT</h2>
+            </div>
+            <div class="modal-body">
+                <p id="totalModal">TOTAL:</p>
+                <p id="changeModal">CHANGE:</p>
+                <button type="button" class="buttons" id="payButtonModal">PAY</button>
+                <button type="button" class="buttons" id="backButton3">BACK</button>
+            </div>
+            <div class="modal-footer">
+                <h3>CONFIRM PAYMENT</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--MODAL IF TABLE IS EMPTY-->
+        <div id="emptyTableModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeEmptyTableModal">&times;</span>
+                <h2>ERROR!</h2>
+            </div>
+            <div class="modal-body">
+                <p>THE TABLE IS EMPTY!</p>
+                <button type="button" class="buttons" id="backButton4">BACK</button>
+            </div>
+            <div class="modal-footer">
+                <h3>ERROR!</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--thank you-->
+        <div id="paidModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h2>THANK YOU!</h2>
+            </div>
+            <div class="modal-body">
+                <p>PAID SUCCESSFULLY!</p>
+                <button type="button" class="buttons" id="new">NEW TRANSACTION</button>
+            </div>
+            <div class="modal-footer">
+                <h3>PLEASE, COME AGAIN</h3>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="icons">
+            <p class="footerText"><b>FOLLOW ME:</b></p><br>
+            <a href="https://www.facebook.com/rj.sanjuan.8">
+                <i class="fa fa-facebook fa-3x" id="facebook"></i>
+            </a>
+                
+            <a href="https://www.instagram.com/rj.sanjuan.8/">
+                <i class="fa fa-instagram fa-3x" id="instagram"></i>
+            </a>
+
+            <a href="https://www.twitter.com">
+                <i class="fa fa-twitter fa-3x" id="twitter"></i>
+            </a>
+            <br><br><br><br>
+            <p class="footerText"><b>CONTACT ME:</b></p>
+            <a href="mailto:renesanjuan3302@gmail.com">
+                <p id="email">renesanjuan3302@gmail.com</p>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
